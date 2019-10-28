@@ -104,7 +104,6 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
         if let p = point , let _ = collectionView.indexPathForItem(at: p){
             longPressed = true
         }
-      
     }
 
     @objc func tapToStopShakingOrBooksSegue(_ tap: UITapGestureRecognizer){
@@ -138,9 +137,7 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
         cell.lblCount.text = String(factory.getBooksCountOfCategory(category: category.id)!)
         // TODO: 图库文件保存到沙盒，取文件地址
         cell.imgCover.image = UIImage(contentsOfFile: NSHomeDirectory().appending(imgDir).appending(category.image!))
-
         cell.lblEditTime.text = CategotyFactory.getEditTimeFromPlist(id: category.id)
-        
         // TODO : 删除模式下抖动，非删除模式下取消抖动
         if longPressed {
             let pos  = collectionView.indexPathForItem(at: point!)?.item
@@ -156,17 +153,28 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
                 anim.repeatCount = MAXFLOAT
                 anim.autoreverses = true
                 cell.layer.add(anim, forKey: "SpringboardShake")
-                
             }
-           
         }else {
             //非删除模式取消抖动
               cell.btnDelete.isHidden = true // TODO:随普通模式和删除模式切换可见
               cell.layer.removeAllAnimations()
         }
-      
+        cell.imgInfo.isUserInteractionEnabled = true
+     
+        let tap = UITapGestureRecognizer(target: self, action: #selector(gotoFindTab(_:)))
+        cell.imgInfo.addGestureRecognizer(tap)
+        cell.imgInfo.tag = indexPath.item
         return cell
     }
+    
+   @objc  func gotoFindTab(_ tap :UITapGestureRecognizer){
+        if let pos = tap.view?.tag {
+            let fild = tabBarController?.viewControllers![1] as! FindController
+                      fild.categorie = categories![pos]
+                      tabBarController?.selectedIndex = 1
+                      tabBarController?.selectedViewController?.tabBarItem.badgeValue = categories![pos].name
+        }
+       }
     
     //删除
     @objc func removeCategory (){
@@ -206,6 +214,8 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
             }
         }
     }
+    
+   
     // MARK: UICollectionViewDelegate
 
     /*

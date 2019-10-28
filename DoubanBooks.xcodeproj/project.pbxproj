@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6600366A5BA0693FC5C2852F /* Pods_DoubanBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D23105E3CF5FBDD7E67C886 /* Pods_DoubanBooks.framework */; };
 		BA5140F12353F532006769B0 /* CategotyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5140F02353F532006769B0 /* CategotyFactory.swift */; };
 		BA5140F323540461006769B0 /* VMBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5140F223540461006769B0 /* VMBook.swift */; };
 		BA5140F523540697006769B0 /* BookFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5140F423540697006769B0 /* BookFactory.swift */; };
@@ -33,6 +34,10 @@
 		BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726BE23613F430047F84C /* ScrollViewExtension.swift */; };
 		BD3726C123613FC60047F84C /* EmbtyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */; };
 		BD3726C3236148CA0047F84C /* FuncTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C2236148CA0047F84C /* FuncTools.swift */; };
+		BD67B18F2362AB1700B53385 /* FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67B18E2362AB1700B53385 /* FindCell.swift */; };
+		BD8F328623629B3C00593B7F /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F328523629B3C00593B7F /* FindController.swift */; };
+		BD8F328A2362A2F900593B7F /* FindViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F32892362A2F900593B7F /* FindViewCell.swift */; };
+		C18879C1928D284A9F1F0CB7 /* Pods_DoubanBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5200CE44F9ED57E66273DB /* Pods_DoubanBooksTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		022721F47C39CA8CCB1D77CB /* Pods-DoubanBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooks.debug.xcconfig"; path = "Target Support Files/Pods-DoubanBooks/Pods-DoubanBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		5D23105E3CF5FBDD7E67C886 /* Pods_DoubanBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoubanBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D130E7087DCAB8D554979B /* Pods-DoubanBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooks.release.xcconfig"; path = "Target Support Files/Pods-DoubanBooks/Pods-DoubanBooks.release.xcconfig"; sourceTree = "<group>"; };
 		BA5140F02353F532006769B0 /* CategotyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategotyFactory.swift; sourceTree = "<group>"; };
 		BA5140F223540461006769B0 /* VMBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMBook.swift; sourceTree = "<group>"; };
 		BA5140F423540697006769B0 /* BookFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFactory.swift; sourceTree = "<group>"; };
@@ -81,6 +89,12 @@
 		BD3726BE23613F430047F84C /* ScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewExtension.swift; path = ../../../../../Downloads/ScrollViewExtension.swift; sourceTree = "<group>"; };
 		BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbtyViewDelegate.swift; sourceTree = "<group>"; };
 		BD3726C2236148CA0047F84C /* FuncTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncTools.swift; sourceTree = "<group>"; };
+		BD67B18E2362AB1700B53385 /* FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCell.swift; sourceTree = "<group>"; };
+		BD8F328523629B3C00593B7F /* FindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
+		BD8F32892362A2F900593B7F /* FindViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewCell.swift; sourceTree = "<group>"; };
+		D973C7F996AA016A28D4AD2E /* Pods-DoubanBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooksTests.release.xcconfig"; path = "Target Support Files/Pods-DoubanBooksTests/Pods-DoubanBooksTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB60A25885B01452A85A9862 /* Pods-DoubanBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-DoubanBooksTests/Pods-DoubanBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF5200CE44F9ED57E66273DB /* Pods_DoubanBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoubanBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6600366A5BA0693FC5C2852F /* Pods_DoubanBooks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,12 +110,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18879C1928D284A9F1F0CB7 /* Pods_DoubanBooksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27DDDBE101E03A98F9964267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				022721F47C39CA8CCB1D77CB /* Pods-DoubanBooks.debug.xcconfig */,
+				A5D130E7087DCAB8D554979B /* Pods-DoubanBooks.release.xcconfig */,
+				FB60A25885B01452A85A9862 /* Pods-DoubanBooksTests.debug.xcconfig */,
+				D973C7F996AA016A28D4AD2E /* Pods-DoubanBooksTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA6714CF2351507A0067D4F1 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +139,8 @@
 				BA6714DA2351507A0067D4F1 /* DoubanBooks */,
 				BA6714F22351507B0067D4F1 /* DoubanBooksTests */,
 				BA6714D92351507A0067D4F1 /* Products */,
+				27DDDBE101E03A98F9964267 /* Pods */,
+				EB99EC85CED6ECC2B0FAD0DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +189,8 @@
 				BA655E46235A8DCA00767920 /* AddCategoryController.swift */,
 				BD1438F8235EF30300DBBA5C /* BooksController.swift */,
 				BD3726BC236133540047F84C /* BookCell.swift */,
+				BD8F328523629B3C00593B7F /* FindController.swift */,
+				BD8F32892362A2F900593B7F /* FindViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +202,7 @@
 				BA875A3723596042005BB2BD /* CategoryCell.swift */,
 				BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */,
 				BD3726C2236148CA0047F84C /* FuncTools.swift */,
+				BD67B18E2362AB1700B53385 /* FindCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +246,15 @@
 			path = Netwotk;
 			sourceTree = "<group>";
 		};
+		EB99EC85CED6ECC2B0FAD0DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D23105E3CF5FBDD7E67C886 /* Pods_DoubanBooks.framework */,
+				FF5200CE44F9ED57E66273DB /* Pods_DoubanBooksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA6714F82351507B0067D4F1 /* Build configuration list for PBXNativeTarget "DoubanBooks" */;
 			buildPhases = (
+				86EE1783A65524808D44FF33 /* [CP] Check Pods Manifest.lock */,
 				BA6714D42351507A0067D4F1 /* Sources */,
 				BA6714D52351507A0067D4F1 /* Frameworks */,
 				BA6714D62351507A0067D4F1 /* Resources */,
+				33ADC30DF27BA616CAB5E465 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA6714FB2351507B0067D4F1 /* Build configuration list for PBXNativeTarget "DoubanBooksTests" */;
 			buildPhases = (
+				9740141D5AC3E1EB04A159E1 /* [CP] Check Pods Manifest.lock */,
 				BA6714EB2351507B0067D4F1 /* Sources */,
 				BA6714EC2351507B0067D4F1 /* Frameworks */,
 				BA6714ED2351507B0067D4F1 /* Resources */,
@@ -310,6 +355,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33ADC30DF27BA616CAB5E465 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoubanBooks/Pods-DoubanBooks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoubanBooks/Pods-DoubanBooks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoubanBooks/Pods-DoubanBooks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86EE1783A65524808D44FF33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoubanBooks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9740141D5AC3E1EB04A159E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoubanBooksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA6714D42351507A0067D4F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -323,14 +432,17 @@
 				BD3726C123613FC60047F84C /* EmbtyViewDelegate.swift in Sources */,
 				BA5140F723540911006769B0 /* BookRepository.swift in Sources */,
 				BA875A3623595594005BB2BD /* CategorisesController.swift in Sources */,
+				BD8F328A2362A2F900593B7F /* FindViewCell.swift in Sources */,
 				BD1438F9235EF30300DBBA5C /* BooksController.swift in Sources */,
 				BA6C15DF2355CC8800871637 /* DataViewModilDelegate.swift in Sources */,
+				BD8F328623629B3C00593B7F /* FindController.swift in Sources */,
 				BA67150E23516B010067D4F1 /* VMCategory.swift in Sources */,
 				BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */,
 				BD3726C3236148CA0047F84C /* FuncTools.swift in Sources */,
 				BA875A3A23596879005BB2BD /* AlertExtenslons.swift in Sources */,
 				BA6714E42351507A0067D4F1 /* DoubanBooks.xcdatamodeld in Sources */,
 				BA5140F323540461006769B0 /* VMBook.swift in Sources */,
+				BD67B18F2362AB1700B53385 /* FindCell.swift in Sources */,
 				BA6C15DD2355CBCF00871637 /* Repositry.swift in Sources */,
 				BA67151023516BF40067D4F1 /* CategoryRepository.swift in Sources */,
 				BA655E4D235AC02200767920 /* DateExtensions.swift in Sources */,
@@ -495,6 +607,7 @@
 		};
 		BA6714F92351507B0067D4F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 022721F47C39CA8CCB1D77CB /* Pods-DoubanBooks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +625,7 @@
 		};
 		BA6714FA2351507B0067D4F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5D130E7087DCAB8D554979B /* Pods-DoubanBooks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +643,7 @@
 		};
 		BA6714FC2351507B0067D4F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB60A25885B01452A85A9862 /* Pods-DoubanBooksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -549,6 +664,7 @@
 		};
 		BA6714FD2351507B0067D4F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D973C7F996AA016A28D4AD2E /* Pods-DoubanBooksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
