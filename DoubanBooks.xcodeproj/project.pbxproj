@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,7 @@
 		BD67B18F2362AB1700B53385 /* FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67B18E2362AB1700B53385 /* FindCell.swift */; };
 		BD8F328623629B3C00593B7F /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F328523629B3C00593B7F /* FindController.swift */; };
 		BD8F328A2362A2F900593B7F /* FindViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F32892362A2F900593B7F /* FindViewCell.swift */; };
+		BDC50F7123668A4C00D0DEB0 /* ApiParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */; };
 		C18879C1928D284A9F1F0CB7 /* Pods_DoubanBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5200CE44F9ED57E66273DB /* Pods_DoubanBooksTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		BD67B18E2362AB1700B53385 /* FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCell.swift; sourceTree = "<group>"; };
 		BD8F328523629B3C00593B7F /* FindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
 		BD8F32892362A2F900593B7F /* FindViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewCell.swift; sourceTree = "<group>"; };
+		BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParameters.swift; sourceTree = "<group>"; };
 		D973C7F996AA016A28D4AD2E /* Pods-DoubanBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooksTests.release.xcconfig"; path = "Target Support Files/Pods-DoubanBooksTests/Pods-DoubanBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB60A25885B01452A85A9862 /* Pods-DoubanBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-DoubanBooksTests/Pods-DoubanBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF5200CE44F9ED57E66273DB /* Pods_DoubanBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoubanBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +127,6 @@
 				FB60A25885B01452A85A9862 /* Pods-DoubanBooksTests.debug.xcconfig */,
 				D973C7F996AA016A28D4AD2E /* Pods-DoubanBooksTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,6 +243,7 @@
 		BA67150C23516A340067D4F1 /* Netwotk */ = {
 			isa = PBXGroup;
 			children = (
+				BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */,
 			);
 			path = Netwotk;
 			sourceTree = "<group>";
@@ -436,6 +438,7 @@
 				BD1438F9235EF30300DBBA5C /* BooksController.swift in Sources */,
 				BA6C15DF2355CC8800871637 /* DataViewModilDelegate.swift in Sources */,
 				BD8F328623629B3C00593B7F /* FindController.swift in Sources */,
+				BDC50F7123668A4C00D0DEB0 /* ApiParameters.swift in Sources */,
 				BA67150E23516B010067D4F1 /* VMCategory.swift in Sources */,
 				BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */,
 				BD3726C3236148CA0047F84C /* FuncTools.swift in Sources */,
