@@ -1,23 +1,7 @@
-//
-//  jsonable.swift
-//  DoubanBooks
-//
+
 //  Created by 2017yd2 on 2019/10/28.
 //  Copyright © 2019 2017yd. All rights reserved.
-//    @NSManaged public var author: String?
-//@NSManaged public var authorIntro: String?
-//@NSManaged public var categoryId: UUID?
-//@NSManaged public var id: UUID?
-//@NSManaged public var image: String?
-//@NSManaged public var isbn10: String?
-//@NSManaged public var isbn13: String?
-//@NSManaged public var pages: Int32
-//@NSManaged public var price: String?
-//@NSManaged public var pubdate: String?
-//@NSManaged public var publisher: String?
-//@NSManaged public var summary: String?
-//@NSManaged public var title: String?
-//@NSManaged public var binding: String?
+
 
 
 import Foundation
@@ -46,12 +30,4 @@ class  ApiParameters {
         return url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }
 }
-protocol JSONable  {
-    init(json: Dictionary<String, Any>)
-}
 
-
-class testJOSN {
-    let jsons = jsonuiols.getSearchUrl(keyword: "", page: 10)
-    
-}

@@ -4,7 +4,6 @@
 //
 //  Created by 2017yd on 2019/10/18.
 //  Copyright © 2019年 2017yd. All rights reserved.
-//
 import UIKit
 
 private let reuseIdentifier = "categoryCell"

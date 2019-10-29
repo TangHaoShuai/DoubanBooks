@@ -8,6 +8,8 @@
 import CoreData
 import Foundation
 class VMBook:NSObject,DataViewModilDelegate {
+
+    
      var author: String?
      var authorIntro: String?
      var categoryId: UUID

@@ -30,6 +30,8 @@
 		BA875A3823596042005BB2BD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA875A3723596042005BB2BD /* CategoryCell.swift */; };
 		BA875A3A23596879005BB2BD /* AlertExtenslons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA875A3923596879005BB2BD /* AlertExtenslons.swift */; };
 		BD1438F9235EF30300DBBA5C /* BooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1438F8235EF30300DBBA5C /* BooksController.swift */; };
+		BD15C08D23683FCD00AE9105 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15C08C23683FCD00AE9105 /* JSONable.swift */; };
+		BD15C08F2368413700AE9105 /* JSONConveryer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15C08E2368413700AE9105 /* JSONConveryer.swift */; };
 		BD3726BD236133540047F84C /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726BC236133540047F84C /* BookCell.swift */; };
 		BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726BE23613F430047F84C /* ScrollViewExtension.swift */; };
 		BD3726C123613FC60047F84C /* EmbtyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */; };
@@ -86,6 +88,8 @@
 		BA875A3723596042005BB2BD /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		BA875A3923596879005BB2BD /* AlertExtenslons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertExtenslons.swift; sourceTree = "<group>"; };
 		BD1438F8235EF30300DBBA5C /* BooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksController.swift; sourceTree = "<group>"; };
+		BD15C08C23683FCD00AE9105 /* JSONable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
+		BD15C08E2368413700AE9105 /* JSONConveryer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConveryer.swift; sourceTree = "<group>"; };
 		BD3726BC236133540047F84C /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		BD3726BE23613F430047F84C /* ScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewExtension.swift; path = ../../../../../Downloads/ScrollViewExtension.swift; sourceTree = "<group>"; };
 		BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbtyViewDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */,
+				BD15C08C23683FCD00AE9105 /* JSONable.swift */,
+				BD15C08E2368413700AE9105 /* JSONConveryer.swift */,
 			);
 			path = Netwotk;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				BA67150E23516B010067D4F1 /* VMCategory.swift in Sources */,
 				BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */,
 				BD3726C3236148CA0047F84C /* FuncTools.swift in Sources */,
+				BD15C08F2368413700AE9105 /* JSONConveryer.swift in Sources */,
 				BA875A3A23596879005BB2BD /* AlertExtenslons.swift in Sources */,
 				BA6714E42351507A0067D4F1 /* DoubanBooks.xcdatamodeld in Sources */,
 				BA5140F323540461006769B0 /* VMBook.swift in Sources */,
@@ -449,6 +456,7 @@
 				BA6C15DD2355CBCF00871637 /* Repositry.swift in Sources */,
 				BA67151023516BF40067D4F1 /* CategoryRepository.swift in Sources */,
 				BA655E4D235AC02200767920 /* DateExtensions.swift in Sources */,
+				BD15C08D23683FCD00AE9105 /* JSONable.swift in Sources */,
 				BA5140F523540697006769B0 /* BookFactory.swift in Sources */,
 				BA6714DC2351507A0067D4F1 /* AppDelegate.swift in Sources */,
 			);
