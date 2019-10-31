@@ -37,9 +37,9 @@
 		BD3726C123613FC60047F84C /* EmbtyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */; };
 		BD3726C3236148CA0047F84C /* FuncTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C2236148CA0047F84C /* FuncTools.swift */; };
 		BD3B9BF3236975F90031A063 /* BookConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3B9BF2236975F90031A063 /* BookConverter.swift */; };
+		BD3B9BF7236A848C0031A063 /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3B9BF6236A848C0031A063 /* SearchHeader.swift */; };
 		BD67B18F2362AB1700B53385 /* FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67B18E2362AB1700B53385 /* FindCell.swift */; };
 		BD8F328623629B3C00593B7F /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F328523629B3C00593B7F /* FindController.swift */; };
-		BD8F328A2362A2F900593B7F /* FindViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F32892362A2F900593B7F /* FindViewCell.swift */; };
 		BDC50F7123668A4C00D0DEB0 /* ApiParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */; };
 		C18879C1928D284A9F1F0CB7 /* Pods_DoubanBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5200CE44F9ED57E66273DB /* Pods_DoubanBooksTests.framework */; };
 /* End PBXBuildFile section */
@@ -96,9 +96,9 @@
 		BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbtyViewDelegate.swift; sourceTree = "<group>"; };
 		BD3726C2236148CA0047F84C /* FuncTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncTools.swift; sourceTree = "<group>"; };
 		BD3B9BF2236975F90031A063 /* BookConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookConverter.swift; sourceTree = "<group>"; };
+		BD3B9BF6236A848C0031A063 /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
 		BD67B18E2362AB1700B53385 /* FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCell.swift; sourceTree = "<group>"; };
 		BD8F328523629B3C00593B7F /* FindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
-		BD8F32892362A2F900593B7F /* FindViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewCell.swift; sourceTree = "<group>"; };
 		BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParameters.swift; sourceTree = "<group>"; };
 		D973C7F996AA016A28D4AD2E /* Pods-DoubanBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooksTests.release.xcconfig"; path = "Target Support Files/Pods-DoubanBooksTests/Pods-DoubanBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB60A25885B01452A85A9862 /* Pods-DoubanBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-DoubanBooksTests/Pods-DoubanBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -197,7 +197,6 @@
 				BD1438F8235EF30300DBBA5C /* BooksController.swift */,
 				BD3726BC236133540047F84C /* BookCell.swift */,
 				BD8F328523629B3C00593B7F /* FindController.swift */,
-				BD8F32892362A2F900593B7F /* FindViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +209,7 @@
 				BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */,
 				BD3726C2236148CA0047F84C /* FuncTools.swift */,
 				BD67B18E2362AB1700B53385 /* FindCell.swift */,
+				BD3B9BF6236A848C0031A063 /* SearchHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,11 +439,11 @@
 				BA875A3823596042005BB2BD /* CategoryCell.swift in Sources */,
 				BA671512235181780067D4F1 /* DataError.swift in Sources */,
 				BA655E47235A8DCA00767920 /* AddCategoryController.swift in Sources */,
+				BD3B9BF7236A848C0031A063 /* SearchHeader.swift in Sources */,
 				BA5140F12353F532006769B0 /* CategotyFactory.swift in Sources */,
 				BD3726C123613FC60047F84C /* EmbtyViewDelegate.swift in Sources */,
 				BA5140F723540911006769B0 /* BookRepository.swift in Sources */,
 				BA875A3623595594005BB2BD /* CategorisesController.swift in Sources */,
-				BD8F328A2362A2F900593B7F /* FindViewCell.swift in Sources */,
 				BD1438F9235EF30300DBBA5C /* BooksController.swift in Sources */,
 				BA6C15DF2355CC8800871637 /* DataViewModilDelegate.swift in Sources */,
 				BD8F328623629B3C00593B7F /* FindController.swift in Sources */,

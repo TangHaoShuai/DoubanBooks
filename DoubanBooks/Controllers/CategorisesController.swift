@@ -146,9 +146,9 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
              //   cell.btnDelete.addTarget(self, action: #selector(delete(_:)), for: .touchUpInside)
              cell.btnDelete.addTarget(self, action: #selector(removeCategory), for: .touchUpInside)
              let anim = CABasicAnimation(keyPath: "transform.rotation")
-                anim.toValue = -Double.pi / 50
+                anim.toValue = -Double.pi / 10
                 anim.fromValue = Double.pi / 50
-                anim.duration = 0.15
+                anim.duration = 0.001
                 anim.repeatCount = MAXFLOAT
                 anim.autoreverses = true
                 cell.layer.add(anim, forKey: "SpringboardShake")
