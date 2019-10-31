@@ -35,13 +35,17 @@ class JSONConveryer <T: JSONable>{
         return array
     }
     
-//    static func getSingle(json :Any) -> T{
-//
-//
-//    }
-
-//    static func getSingle(json:Any ,key:String) ->T {
-//         let dic = json as! Dictionary<String ,Any>
-//        dic = dic[key] as! Array<Any>
-//    }
+    ///解析json { }  整个字符串都是所需的数据
+      static func getSingle(json :Any) -> T{
+      return T(json: json as! Dictionary<String,Any>)
+    
+    }
+    ///解析格式为 {"key":{ },"key2":"xxx"...} 的数据
+    static func getSingle(json:Any ,key:String) ->T {
+         let dic = json as! Dictionary<String ,Any>
+         let theDic = dic[key] as! Dictionary<String,Any>
+        return T(json: theDic)
+    }
+    
+   // static func extractUsefulJson(origin:String , )
 }

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Alamofire
 @testable import DoubanBooks
 
 class DoubanBooksTests: XCTestCase {
@@ -20,8 +21,19 @@ class DoubanBooksTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        Alamofire.request(ApiParameters.getSearchUrl(keyword: "ios", page: 0))
+              .validate(contentType: ["application/json"])
+            .responseJSON{ response in
+                switch response.result {
+                case .success:
+                    if let json = response.result.value{
+                        let books = BookConverter.getBooks(json: json)
+                        XCTAssertEqual(books?.count,20 )
+                    }
+                case.failure(let info):
+                    print(info)
+                } 
+        }
     }
 
     func testPerformanceExample() {
@@ -29,6 +41,13 @@ class DoubanBooksTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testBookConverter (){
+      
+       
+
+        
     }
 
 }

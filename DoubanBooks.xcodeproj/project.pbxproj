@@ -36,6 +36,7 @@
 		BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726BE23613F430047F84C /* ScrollViewExtension.swift */; };
 		BD3726C123613FC60047F84C /* EmbtyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */; };
 		BD3726C3236148CA0047F84C /* FuncTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C2236148CA0047F84C /* FuncTools.swift */; };
+		BD3B9BF3236975F90031A063 /* BookConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3B9BF2236975F90031A063 /* BookConverter.swift */; };
 		BD67B18F2362AB1700B53385 /* FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67B18E2362AB1700B53385 /* FindCell.swift */; };
 		BD8F328623629B3C00593B7F /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F328523629B3C00593B7F /* FindController.swift */; };
 		BD8F328A2362A2F900593B7F /* FindViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F32892362A2F900593B7F /* FindViewCell.swift */; };
@@ -94,6 +95,7 @@
 		BD3726BE23613F430047F84C /* ScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewExtension.swift; path = ../../../../../Downloads/ScrollViewExtension.swift; sourceTree = "<group>"; };
 		BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbtyViewDelegate.swift; sourceTree = "<group>"; };
 		BD3726C2236148CA0047F84C /* FuncTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncTools.swift; sourceTree = "<group>"; };
+		BD3B9BF2236975F90031A063 /* BookConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookConverter.swift; sourceTree = "<group>"; };
 		BD67B18E2362AB1700B53385 /* FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCell.swift; sourceTree = "<group>"; };
 		BD8F328523629B3C00593B7F /* FindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindController.swift; sourceTree = "<group>"; };
 		BD8F32892362A2F900593B7F /* FindViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */,
 				BD15C08C23683FCD00AE9105 /* JSONable.swift */,
 				BD15C08E2368413700AE9105 /* JSONConveryer.swift */,
+				BD3B9BF2236975F90031A063 /* BookConverter.swift */,
 			);
 			path = Netwotk;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				BA6C15DF2355CC8800871637 /* DataViewModilDelegate.swift in Sources */,
 				BD8F328623629B3C00593B7F /* FindController.swift in Sources */,
 				BDC50F7123668A4C00D0DEB0 /* ApiParameters.swift in Sources */,
+				BD3B9BF3236975F90031A063 /* BookConverter.swift in Sources */,
 				BA67150E23516B010067D4F1 /* VMCategory.swift in Sources */,
 				BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */,
 				BD3726C3236148CA0047F84C /* FuncTools.swift in Sources */,
