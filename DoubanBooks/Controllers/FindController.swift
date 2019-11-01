@@ -82,12 +82,12 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
         return header
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-           if let kw = searchBar.text {
-               tabBarController!.viewControllers![1].tabBarItem.badgeValue = kw
-           }
-       }
-    
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+         if let kw = searchBar.text {
+                     tabBarController!.viewControllers![1].tabBarItem.badgeValue = kw
+                 }
+    }
     // MARK: UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

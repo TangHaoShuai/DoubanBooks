@@ -10,4 +10,10 @@ import UIKit
 
 class FindCell: UICollectionViewCell {
     
+    @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var lblimafe: UIImageView!
+    
+    @IBOutlet weak var author: UILabel!
+    
 }

@@ -346,6 +346,11 @@
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="100" height="140"/>
+                                <connections>
+                                    <outlet property="author" destination="Nuk-p5-NxV" id="Fsh-Wf-rr2"/>
+                                    <outlet property="lblName" destination="Sop-pM-1U9" id="ryk-x1-rbg"/>
+                                    <outlet property="lblimafe" destination="PgP-rx-3MI" id="lBo-oE-T1y"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="searchHeader" id="Nlg-1M-KQn" customClass="SearchHeader" customModule="DoubanBooks" customModuleProvider="target">
