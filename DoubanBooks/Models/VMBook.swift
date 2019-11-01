@@ -13,13 +13,13 @@ class VMBook:NSObject,DataViewModilDelegate,JSONable {
         
         if json[sbauthor] is NSArray {
             let authors = json[sbauthor] as! NSArray
+            author = ""
             for i in authors {
               author! += i as! String + ","
             }
             if author!.count > 0{
                 author?.removeLast()
             }
-            
         }
 
         authorIntro = json[sbauthorIntro] as? String

@@ -9,11 +9,17 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-private let reuseIdentifier = "bookItemCell"
+private let reuseIdentifier = "bookitemcells"
 
 class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarDelegate  {
+    
     var categorie = VMCategoty()
     var books:[VMBook]?
+    
+    var isLoading = false //isLoading的时候不能执行加载的当前页面 (Int)
+    var currentPage = 0
+    
+     let factory = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     
     var isEmpty: Bool{
         get {
@@ -40,29 +46,18 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
         return img
     }
     
-    override func viewDidLoad() {
+  
+    
+      override func viewDidLoad() {
         super.viewDidLoad()
         
-        do {
-            //  books = try factory.getBooksOf(category: category!.id)
-            books = nil
-        } catch DataError.readCollectionError(let info) {
-            books = [VMBook]()
-            UIAlertController.showALertAndDismiss(info, in: self, completion: {
-                self.navigationController?.popViewController(animated: true)
-            })
-        } catch {
-            books = [VMBook]()
-            UIAlertController.showALertAndDismiss(error.localizedDescription, in: self, completion: {
-                self.navigationController?.popViewController(animated: true)
-            })
-        }
-           books?.append(VMBook())
-           collectionView.setEmtpyCollectionViewDelegate(target: self)
-     
+        
+        
+//
+      collectionView.setEmtpyCollectionViewDelegate(target: self)
+        
     //   self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        
+ 
     }
     
     /*
@@ -87,7 +82,43 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
          if let kw = searchBar.text {
                      tabBarController!.viewControllers![1].tabBarItem.badgeValue = kw
                  }
+        
+        isLoading = false
+        currentPage = 0
+        books?.removeAll()
+        loadBooks(kw: searchBar.text!)
+        self.collectionView.reloadData()
     }
+
+    func loadBooks(kw:String) {
+          Alamofire.request(ApiParameters.getSearchUrl(keyword: kw , page: currentPage))
+                               .validate(contentType: ["application/json"])
+                             .responseJSON{ response in
+                                 switch response.result {
+                                 case .success:
+                                     if let json = response.result.value{
+                                         let books = BookConverter.getBooks(json: json)
+                                        if books == nil || books?.count == 0 {
+                                            self.isLoading = true
+                                        }else {
+                                            if self.books == nil {
+                                                self.books = books
+                                            }else {
+                                                self.books! += books!
+                                            }
+                                            self.collectionView.reloadData()
+                                            self.isLoading = false
+                                        }
+                                     }
+                                     else {
+                                        self.isLoading = true
+                                    }
+                                       case  let.failure(error):
+                                       UIAlertController.showAlert("网络请求错误:\(error.localizedDescription)", in: self)
+                                       self.isLoading = true
+                                }
+                         }
+      }
     // MARK: UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -101,8 +132,28 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
         return books?.count ?? 0
     }
     
+
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FindCell
+        let book = books![indexPath.item]
+        cell.lblName.text = book.title
+        cell.author.text = book.author
+        Alamofire.request(book.image!).responseImage{ response in
+            if let imag = response.result.value {
+                cell.lblimafe.image = imag
+            }
+        }
+        cell.lblimafe.image = UIImage(named: "star_off")
+        if (try? factory.isBookExists(book: book)) ?? false{
+            cell.lblimafe.image = UIImage(named: "star_on")
+        }
+        
+        if !isLoading && indexPath.item == (books?.count)! - 1 {
+            isLoading = true
+            currentPage += 1
+//            loadBooks(kw: kw)
+        }
         return cell
     }
 

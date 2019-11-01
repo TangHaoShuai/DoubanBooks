@@ -310,7 +310,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookitemcell" id="cEm-55-vmq" customClass="FindCell" customModule="DoubanBooks" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookitemcells" id="cEm-55-vmq" customClass="FindCell" customModule="DoubanBooks" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="100" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ctj-o7-Vsl">
@@ -347,9 +347,9 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="100" height="140"/>
                                 <connections>
-                                    <outlet property="author" destination="Nuk-p5-NxV" id="Fsh-Wf-rr2"/>
-                                    <outlet property="lblName" destination="Sop-pM-1U9" id="ryk-x1-rbg"/>
-                                    <outlet property="lblimafe" destination="PgP-rx-3MI" id="lBo-oE-T1y"/>
+                                    <outlet property="author" destination="Nuk-p5-NxV" id="Gdc-ss-xQO"/>
+                                    <outlet property="lblName" destination="Sop-pM-1U9" id="O4c-s2-VeD"/>
+                                    <outlet property="lblimafe" destination="PgP-rx-3MI" id="BkI-yW-lXy"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -377,48 +377,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlJ-8p-Kwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1650.7246376811595" y="-637.5"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="NgB-in-y2c">
-            <objects>
-                <collectionViewController id="gmZ-hh-kPu" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uBH-Jz-4UY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rvy-KU-BlQ">
-                            <size key="itemSize" width="244" height="390"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4kg-gc-SL7">
-                            <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="test" id="d3c-V7-di6">
-                                <rect key="frame" x="85" y="0.0" width="244" height="390"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27e-vo-JiD">
-                                    <rect key="frame" x="0.0" y="0.0" width="244" height="390"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="244" height="390"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="gmZ-hh-kPu" id="5gj-yy-AOt"/>
-                            <outlet property="delegate" destination="gmZ-hh-kPu" id="Lyv-5M-PFV"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d6e-CV-jlE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2782.608695652174" y="-618.08035714285711"/>
         </scene>
         <!--我的图书-->
         <scene sceneID="I5S-cO-clC">

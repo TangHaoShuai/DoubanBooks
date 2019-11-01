@@ -45,7 +45,7 @@ class BooksController: UITableViewController,EmptyViewDelegate {
         
         do {
             books = try factory.getBooksOf(category: category!.id)
-            books = nil
+          
         } catch DataError.readCollectionError(let info) {
             books = [VMBook]()
             UIAlertController.showALertAndDismiss(info, in: self, completion: {

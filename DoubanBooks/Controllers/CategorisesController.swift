@@ -44,6 +44,9 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+     
+        
         do{
           categories = try factory.getAllCategories()
         }catch DataError.readCollectionError(let info){

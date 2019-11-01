@@ -9,7 +9,7 @@ import Foundation
    let sbcount = "count"
    let sbstart = "start"
    let sbtotal = "total"
-   let sbauthor = "authro"
+   let sbauthor = "author"
    let sbauthorIntro = "author_intro"
    let sbimage = "image"
    let sbisbn10 = "isbn10"
