@@ -8,7 +8,7 @@ import UIKit
 
 private let reuseIdentifier = "categoryCell"
 private let BooksSague = "BooksSague"
- 
+                           
 class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
    var categories: [VMCategoty]?
     
@@ -175,7 +175,9 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
                       fild.categorie = categories![pos]
                       tabBarController?.selectedIndex = 1
                       tabBarController?.selectedViewController?.tabBarItem.badgeValue = categories![pos].name
+                      fild.loadBooks(kw: categories![pos].name!)
         }
+  
        }
     
     //删除
@@ -205,8 +207,8 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
                             return
              }
         })
-        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == BooksSague {
             let destination = segue.destination as! BooksController
