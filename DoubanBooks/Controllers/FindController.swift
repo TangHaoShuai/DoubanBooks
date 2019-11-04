@@ -20,6 +20,7 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
     var isLoading = false //isLoading的时候不能执行加载的当前页面 (Int)
     var currentPage = 0
     var keyword : String?
+    
     let factory = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     
     var isEmpty: Bool{
@@ -46,18 +47,23 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
     }
     
     
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
    
+     
+        // TODO: 点击普通手势
+               let tap = UITapGestureRecognizer(target: self, action: #selector(tapToStopShakingOrBooksSegue(_:)))
+               collectionView.addGestureRecognizer(tap)
         
         collectionView.setEmtpyCollectionViewDelegate(target: self)
         
         //   self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
     }
-    
+  
     /*
      // MARK: - Navigation
      
@@ -67,6 +73,8 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
      // Pass the selected object to the new view controller.
      }
      */
+      var point:CGPoint?
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind:
         String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "searchHeader", for: indexPath)
@@ -76,6 +84,14 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
     }
     
     
+    // TODO: 点击手势方法
+      @objc func tapToStopShakingOrBooksSegue(_ tap: UITapGestureRecognizer){
+          // TODO: 2.如果非删除模式，点击item的时候就执行books场景过度
+          point = tap.location(in: collectionView)
+          if let p = point, let indexPath = collectionView.indexPathForItem(at: p) {
+              performSegue(withIdentifier: "mzz", sender: indexPath.item)
+          }
+      }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let kw = searchBar.text {
             tabBarController!.viewControllers![1].tabBarItem.badgeValue = kw
@@ -152,6 +168,7 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
         let book = books![indexPath.item]
         cell.lblName.text = book.title
         cell.author.text = book.author
+        
         Alamofire.request(book.image!).responseImage{ response in
             if let imag = response.result.value {
                 cell.lblimafe.image = imag
@@ -170,6 +187,19 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
         return cell
     }
     
+    
+    
+    
+      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if segue.identifier == "mzz" {
+              let destination = segue.destination as! BookDetailController
+              if sender is Int {
+                  let me = books?[sender as! Int]
+                  destination.book = me
+              }
+          }
+      }
+   
     
     // MARK: UICollectionViewDelegate
     
