@@ -18,6 +18,8 @@ class AddCategoryController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ///接收通知
+         NotificationCenter.default.addObserver(self, selector: #selector(mzznotice), name: NSNotification.Name(rawValue: MzznotiCategory), object: nil)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(selectPicture) )
                 imgCover.addGestureRecognizer(recognizer)
                 imgCover.isUserInteractionEnabled = true
@@ -55,12 +57,9 @@ class AddCategoryController: UIViewController, UIImagePickerControllerDelegate, 
         if name == nil || name!.count == 0 {
             UIAlertController.showALertAndDismiss("类别名称不能为空", in: self)
         }
-        
         let category = VMCategoty()
         category.name = name
         category.image = category.id.uuidString + ".jpg"
-        
-        
         let (success, info) = factory.addCategory(cattegory: category)
         if !success {
             UIAlertController.showALertAndDismiss(info!, in: self)
@@ -70,6 +69,11 @@ class AddCategoryController: UIViewController, UIImagePickerControllerDelegate, 
         CategotyFactory.updateEditTime(id: category.id)
         /// NotificationCenter：通知中心,default: 整个应用默认的通知中心
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: notiCategory), object: nil, userInfo: ["name":category.name!])
+    }
+    
+    
+    @objc func mzznotice(){
+        
     }
     
     

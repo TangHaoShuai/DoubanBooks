@@ -12,6 +12,8 @@ private let BooksSague = "BooksSague"
 class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
    var categories: [VMCategoty]?
     
+   var books: [VMBook]?
+    
      var isEmpty: Bool{
          get {
              if let data = categories {
@@ -41,12 +43,11 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
     
     let addCategorySegu = "addCategorySegu"
     let factory = CategotyFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
+    
+    let factorybook = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-     
-        
+         books =   try? factorybook.getBooksBy(kw: "java")
         do{
           categories = try factory.getAllCategories()
         }catch DataError.readCollectionError(let info){
@@ -58,13 +59,14 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
         /// selector：要做什么
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: NSNotification.Name(rawValue: notiCategory), object: nil)
         
+  //         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: NSNotification.Name(rawValue: notiCategory), object: nil)
         
         let lpTap = UILongPressGestureRecognizer(target: self ,action: #selector(longPressSwitch(_:)))
         collectionView.addGestureRecognizer(lpTap)
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapToStopShakingOrBooksSegue(_:)))
         collectionView.addGestureRecognizer(tap)
-
         collectionView.setEmtpyCollectionViewDelegate(target: self)
+        
     }
     /// 接受数据
     @objc func refresh(noti: Notification){
@@ -136,7 +138,11 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
         let category = categories![indexPath.item]
         cell.lblName.text = category.name!
+        
+        
         cell.lblCount.text = String(factory.getBooksCountOfCategory(category: category.id)!)
+        
+        
         // TODO: 图库文件保存到沙盒，取文件地址
         cell.imgCover.image = UIImage(contentsOfFile: NSHomeDirectory().appending(imgDir).appending(category.image!))
         cell.lblEditTime.text = CategotyFactory.getEditTimeFromPlist(id: category.id)

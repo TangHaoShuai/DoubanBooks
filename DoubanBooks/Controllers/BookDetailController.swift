@@ -12,6 +12,7 @@ import AlamofireImage
 
 class BookDetailController: UIViewController {
 
+    @IBOutlet weak var imgcollect: UIBarButtonItem!
     
     @IBOutlet weak var lblimg: UIImageView!
     ///作者
@@ -32,23 +33,53 @@ class BookDetailController: UIViewController {
     
     
    var book:VMBook?
+    
     let factory = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         lblauthor.text = book?.author
         lblpublishing.text = book?.publisher
         lblprice.text = book?.price
         lblsummary.text = book?.summary
         aboutTheauthor.text = book?.authorIntro
-        
-        factory.addBook(cattegory: book!)
+
         Alamofire.request(book!.image!).responseImage{ response in
                   if let imag = response.result.value {
                     self.lblimg.image = imag
                   }
-              }
-        // Do any additional setup after loading the view.
+        }
+        
+        var icStar = "ic_star_off"
+        if (try? factory.isBookExists(book: book!)) ?? false{
+            icStar = "ic_star_on"
+        }
+        imgcollect.image =  UIImage(named: icStar)
+        
+       
+    }
+  
+    
+    
+    ///点击完成退出
+    @IBAction func quit(_ sender: Any) {
+       dismiss(animated: true , completion: nil)
+    }
+      ///点击收藏
+    @IBAction func collect(_ sender: Any) {
+        if  UIImage(named: "ic_star_off") == imgcollect.image{
+            imgcollect.image =  UIImage(named: "ic_star_on")
+            let (success, error) =   factory.addBook(book: book!)
+            UIAlertController.showAlert("点击了收藏！！", in: self)
+        }else{
+             
+            imgcollect.image =  UIImage(named: "ic_star_off")
+                       let (success, error) =  try! factory.removeBook(book: book!)
+                       UIAlertController.showAlert("取消收藏！！", in: self)
+        }
+        
+          
     }
     
 

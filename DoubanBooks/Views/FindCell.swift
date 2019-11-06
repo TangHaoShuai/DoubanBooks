@@ -16,4 +16,8 @@ class FindCell: UICollectionViewCell {
     
     @IBOutlet weak var author: UILabel!
     
+    
+    @IBOutlet weak var imgcollect: UIImageView!
+    
+    
 }

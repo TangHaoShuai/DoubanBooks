@@ -32,23 +32,41 @@ class Repositry<T:DataViewModilDelegate> where T:NSObject{
     ///
     /// - parameter cols: 查询条件要比配的列
     //通用的存在的持久化数据
-    func isEntityExists(_ cols: [String], keyword: String) throws -> Bool {
-        var format = ""
-        var args = [String]()
-        for col in cols {
-            format += "\(col) = %@ || "
-            args.append(keyword)
-        }
-        format.removeLast(3)
-        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityName)
-        fetch.predicate = NSPredicate(format: format, argumentArray: args)
-        do {
-            let result = try context.fetch(fetch)
-            return result.count > 0
-        } catch {
-            throw DataError.entityExistsError("判断存在的数据失败")
-        }
-    }
+    func isEntityExists(_ cols: [String],keyword: String) throws -> Bool {
+          var format = ""
+          var args = [String]()
+          for col in cols {
+              format += "\(col) = %@ || "
+              args.append(keyword)
+          }
+          format.removeLast(3)
+          let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityName)
+          fetch.predicate = NSPredicate(format: format, argumentArray: args)
+          do{
+              let result = try context.fetch(fetch)
+              return result.count > 0
+          }catch {
+              throw DataError.entityExistsError("判断数据存在失败 ")
+          }
+      }
+    
+//    func isEntityExists(_ cols: [String], keyword: String) throws -> Bool {
+//        var format = ""
+//        var args = [String]()
+//        for col in cols {
+//            format += "\(col) = %@ || "
+//            args.append(keyword)
+//        }
+//        format.removeLast(3)
+//        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityName)
+//        fetch.predicate = NSPredicate(format: format, argumentArray: args)
+//        do {
+//            let result = try context.fetch(fetch)
+//            return result.count > 0
+//        } catch {
+//            throw DataError.entityExistsError("判断存在的数据失败")
+//        }
+//    }
     
     /// 获取所有数据
     ///

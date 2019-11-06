@@ -52,18 +52,17 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-   
+     NotificationCenter.default.addObserver(self, selector: #selector(mzznotice), name: NSNotification.Name(rawValue: MzznotiCategory), object: nil)
      
         // TODO: 点击普通手势
                let tap = UITapGestureRecognizer(target: self, action: #selector(tapToStopShakingOrBooksSegue(_:)))
                collectionView.addGestureRecognizer(tap)
-        
         collectionView.setEmtpyCollectionViewDelegate(target: self)
-        
-        //   self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
     }
   
+    @objc func mzznotice(){
+        collectionView.reloadData()
+    }
     /*
      // MARK: - Navigation
      
@@ -92,16 +91,12 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
               performSegue(withIdentifier: "mzz", sender: indexPath.item)
           }
       }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let kw = searchBar.text {
             tabBarController!.viewControllers![1].tabBarItem.badgeValue = kw
         }
-
-      //  categorie = nil
-        
         loadBooks(kw: searchBar.text!)
-        
-      //  self.collectionView.reloadData()
     }
     
     func reductionBook(){
@@ -161,9 +156,6 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
-//              let category = categories![indexPath.item]
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FindCell
         let book = books![indexPath.item]
         cell.lblName.text = book.title
@@ -174,9 +166,10 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
                 cell.lblimafe.image = imag
             }
         }
-        cell.lblimafe.image = UIImage(named: "star_off")
+        
+        cell.imgcollect.image = UIImage(named: "ic_star_off")
         if (try? factory.isBookExists(book: book)) ?? false{
-            cell.lblimafe.image = UIImage(named: "star_on")
+            cell.imgcollect.image = UIImage(named: "ic_star_on")
         }
         
         if !isLoading && indexPath.item == (books?.count)! - 1 {
