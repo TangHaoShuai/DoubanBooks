@@ -33,6 +33,8 @@ class BookDetailController: UIViewController {
     
     
    var book:VMBook?
+   var category:VMCategoty?
+     var readonly = false
     
     let factory = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     
@@ -56,7 +58,7 @@ class BookDetailController: UIViewController {
             icStar = "ic_star_on"
         }
         imgcollect.image =  UIImage(named: icStar)
-        
+        imgcollect.isEnabled = !readonly
        
     }
   
@@ -70,6 +72,9 @@ class BookDetailController: UIViewController {
     @IBAction func collect(_ sender: Any) {
         if  UIImage(named: "ic_star_off") == imgcollect.image{
             imgcollect.image =  UIImage(named: "ic_star_on")
+            
+            book?.categoryId = category!.id
+            
             let (success, error) =   factory.addBook(book: book!)
             UIAlertController.showAlert("点击了收藏！！", in: self)
         }else{

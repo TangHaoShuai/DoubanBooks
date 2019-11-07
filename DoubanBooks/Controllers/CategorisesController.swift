@@ -46,6 +46,11 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
     
     let factorybook = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     override func viewDidLoad() {
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(mzznotice), name: NSNotification.Name(rawValue: MzznotiCategory), object: nil)
+        
+        
         super.viewDidLoad()
          books =   try? factorybook.getBooksBy(kw: "java")
         do{
@@ -68,6 +73,10 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
         collectionView.setEmtpyCollectionViewDelegate(target: self)
         
     }
+    
+    @objc func mzznotice(){
+         collectionView.reloadData()
+     }
     /// 接受数据
     @objc func refresh(noti: Notification){
         //刷新
@@ -178,7 +187,7 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
    @objc  func gotoFindTab(_ tap :UITapGestureRecognizer){
         if let pos = tap.view?.tag {
             let fild = tabBarController?.viewControllers![1] as! FindController
-                      fild.categorie = categories![pos]
+                       fild.category = categories![pos]
                       tabBarController?.selectedIndex = 1
                       tabBarController?.selectedViewController?.tabBarItem.badgeValue = categories![pos].name
                       fild.loadBooks(kw: categories![pos].name!)

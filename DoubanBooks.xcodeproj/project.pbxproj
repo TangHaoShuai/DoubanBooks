@@ -32,6 +32,8 @@
 		BD1438F9235EF30300DBBA5C /* BooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1438F8235EF30300DBBA5C /* BooksController.swift */; };
 		BD15C08D23683FCD00AE9105 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15C08C23683FCD00AE9105 /* JSONable.swift */; };
 		BD15C08F2368413700AE9105 /* JSONConveryer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15C08E2368413700AE9105 /* JSONConveryer.swift */; };
+		BD184E6E2373A44E00DD1D6E /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184E6D2373A44E00DD1D6E /* ActionView.swift */; };
+		BD184E702373A47900DD1D6E /* PickerModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184E6F2373A47900DD1D6E /* PickerModelDelegate.swift */; };
 		BD3726BD236133540047F84C /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726BC236133540047F84C /* BookCell.swift */; };
 		BD3726BF23613F430047F84C /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726BE23613F430047F84C /* ScrollViewExtension.swift */; };
 		BD3726C123613FC60047F84C /* EmbtyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */; };
@@ -66,7 +68,7 @@
 		BA655E46235A8DCA00767920 /* AddCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryController.swift; sourceTree = "<group>"; };
 		BA655E48235ABC5100767920 /* CategoryTimeList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CategoryTimeList.plist; sourceTree = "<group>"; };
 		BA655E4C235AC02200767920 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		BA6714D82351507A0067D4F1 /* DoubanBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6714D82351507A0067D4F1 /* 弟弟App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "弟弟App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6714DB2351507A0067D4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6714E02351507A0067D4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA6714E32351507A0067D4F1 /* DoubanBooks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoubanBooks.xcdatamodel; sourceTree = "<group>"; };
@@ -92,6 +94,8 @@
 		BD1438F8235EF30300DBBA5C /* BooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksController.swift; sourceTree = "<group>"; };
 		BD15C08C23683FCD00AE9105 /* JSONable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
 		BD15C08E2368413700AE9105 /* JSONConveryer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConveryer.swift; sourceTree = "<group>"; };
+		BD184E6D2373A44E00DD1D6E /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		BD184E6F2373A47900DD1D6E /* PickerModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModelDelegate.swift; sourceTree = "<group>"; };
 		BD3726BC236133540047F84C /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		BD3726BE23613F430047F84C /* ScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewExtension.swift; path = ../../../../../Downloads/ScrollViewExtension.swift; sourceTree = "<group>"; };
 		BD3726C023613FC60047F84C /* EmbtyViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbtyViewDelegate.swift; sourceTree = "<group>"; };
@@ -156,7 +160,7 @@
 		BA6714D92351507A0067D4F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA6714D82351507A0067D4F1 /* DoubanBooks.app */,
+				BA6714D82351507A0067D4F1 /* 弟弟App.app */,
 				BA6714EF2351507B0067D4F1 /* DoubanBooksTests.xctest */,
 			);
 			name = Products;
@@ -213,6 +217,8 @@
 				BD3726C2236148CA0047F84C /* FuncTools.swift */,
 				BD67B18E2362AB1700B53385 /* FindCell.swift */,
 				BD3B9BF6236A848C0031A063 /* SearchHeader.swift */,
+				BD184E6D2373A44E00DD1D6E /* ActionView.swift */,
+				BD184E6F2373A47900DD1D6E /* PickerModelDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,7 +294,7 @@
 			);
 			name = DoubanBooks;
 			productName = DoubanBooks;
-			productReference = BA6714D82351507A0067D4F1 /* DoubanBooks.app */;
+			productReference = BA6714D82351507A0067D4F1 /* 弟弟App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA6714EE2351507B0067D4F1 /* DoubanBooksTests */ = {
@@ -438,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD184E6E2373A44E00DD1D6E /* ActionView.swift in Sources */,
 				BD3726BD236133540047F84C /* BookCell.swift in Sources */,
 				BA875A3823596042005BB2BD /* CategoryCell.swift in Sources */,
 				BA671512235181780067D4F1 /* DataError.swift in Sources */,
@@ -462,6 +469,7 @@
 				BA5140F323540461006769B0 /* VMBook.swift in Sources */,
 				BD67B18F2362AB1700B53385 /* FindCell.swift in Sources */,
 				BA6C15DD2355CBCF00871637 /* Repositry.swift in Sources */,
+				BD184E702373A47900DD1D6E /* PickerModelDelegate.swift in Sources */,
 				BA67151023516BF40067D4F1 /* CategoryRepository.swift in Sources */,
 				BA655E4D235AC02200767920 /* DateExtensions.swift in Sources */,
 				BD15C08D23683FCD00AE9105 /* JSONable.swift in Sources */,
@@ -636,7 +644,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.lzzy.DoubanBooks;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "弟弟App";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -654,7 +662,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.lzzy.DoubanBooks;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "弟弟App";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

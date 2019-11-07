@@ -13,7 +13,7 @@ private let reuseIdentifier = "bookitemcells"
                     
 class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarDelegate  {
     
-    var categorie = VMCategoty()
+     var category: VMCategoty?
     
     var books:[VMBook]?
     
@@ -189,7 +189,8 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
               if sender is Int {
                   let me = books?[sender as! Int]
                   destination.book = me
-              }
+                  destination.category = category!
+            }
           }
       }
    

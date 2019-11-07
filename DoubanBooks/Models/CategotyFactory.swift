@@ -112,6 +112,8 @@ final class CategotyFactory {
         let dic = NSMutableDictionary(contentsOfFile: path!)
         if let time = dic?[id.uuidString] as? String{
             return time
+        }else {
+            updateEditTime(id: id)
         }
         return Date.dateNowAsString(pattern: "yyyy/MM/dd HH:mm")
     }

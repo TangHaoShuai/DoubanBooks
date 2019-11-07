@@ -48,18 +48,15 @@ class BooksController: UITableViewController,EmptyViewDelegate {
     let factory = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     override func viewDidLoad() {
         super.viewDidLoad()
-        books =   try? factory.getBooksBy(kw: "java")
-//        var book:VMBook?
-//        book?.summary = "sdasasassasacfsacfasfsacfascfafas"
-//        books?.append(book!)
-//         do{
-//            books = try factory.getBooksBy(kw: "java")
-//               }catch DataError.readCollectionError(let info){
-//                   books = [VMBook]()
-//                   UIAlertController.showALertAndDismiss(info, in: self)
-//               }catch{
-//                   books = [VMBook]()
-//               }
+      //  books =   try? factory.getBooksBy(kw: "java")
+         do{
+            books = try! factory.getBooksOf(category: category!.id)
+               }catch DataError.readCollectionError(let info){
+                   books = [VMBook]()
+                   UIAlertController.showALertAndDismiss(info, in: self)
+               }catch{
+                   books = [VMBook]()
+               }
         
     tableView.setEmtpyTableViewDelegate(target: self)
     }
@@ -118,6 +115,7 @@ class BooksController: UITableViewController,EmptyViewDelegate {
                if sender is Int {
                    let me = books?[sender as! Int]
                    destination.book = me
+                   destination.readonly = true
                }
            }
        }
@@ -128,7 +126,14 @@ class BooksController: UITableViewController,EmptyViewDelegate {
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
         let (success, error) =  try! factory.removeBook(book: (books?[indexPath.item])!)
-         books =   try? factory.getBooksBy(kw: "java")
+         do{
+                   books = try! factory.getBooksOf(category: category!.id)
+                      }catch DataError.readCollectionError(let info){
+                          books = [VMBook]()
+                          UIAlertController.showALertAndDismiss(info, in: self)
+                      }catch{
+                          books = [VMBook]()
+                      }
          tableView.reloadData()
      } else if editingStyle == .insert {
      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
