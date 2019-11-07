@@ -7,11 +7,11 @@
 //
 
 import Foundation
-
-protocol  PickerModeleDelegate{
-    var title: String{get}
-    var value:Any {get}
+protocol PickerModelDelegate {
+    var title: String {get}
+    var value: Any {get}
 }
-protocol PickerItemSelectedDelete {
+protocol PickerItemSelectedDelegate {
     func itemSelected(index: Int)
+    
 }

@@ -10,7 +10,14 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class BookDetailController: UIViewController {
+
+class BookDetailController: UIViewController,PickerItemSelectedDelegate{
+   
+    
+  
+    let categories: [VMCategoty] = {
+                  return (try? CategotyFactory.getInstance(UIApplication.shared.delegate as! AppDelegate).getAllCategories()) ?? [VMCategoty]()
+     }()
 
     @IBOutlet weak var imgcollect: UIBarButtonItem!
     
@@ -37,9 +44,13 @@ class BookDetailController: UIViewController {
      var readonly = false
     
     let factory = BookFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+       
         
         lblauthor.text = book?.author
         lblpublishing.text = book?.publisher
@@ -71,22 +82,25 @@ class BookDetailController: UIViewController {
       ///点击收藏
     @IBAction func collect(_ sender: Any) {
         if  UIImage(named: "ic_star_off") == imgcollect.image{
-            imgcollect.image =  UIImage(named: "ic_star_on")
-            
-            book?.categoryId = category!.id
-            
-            let (success, error) =   factory.addBook(book: book!)
-            UIAlertController.showAlert("点击了收藏！！", in: self)
+          let picker = ActionCollectionPicker<VMCategoty>(title: "选择图书类别", items: categories, handler: self, mother: self.view)
+                        picker.show()
         }else{
-             
             imgcollect.image =  UIImage(named: "ic_star_off")
-                       let (success, error) =  try! factory.removeBook(book: book!)
-                       UIAlertController.showAlert("取消收藏！！", in: self)
+            let (success, error) =  try! factory.removeBook(book: book!)
+            UIAlertController.showAlert("取消收藏！！", in: self)
         }
         
           
     }
     
+    func itemSelected(index: Int) {
+         let category1 = categories[index]
+         book?.categoryId = category1.id
+         let (success, error) =   factory.addBook(book: book!)
+         UIAlertController.showAlert("点击了收藏！！", in: self)
+         imgcollect.image =  UIImage(named: "ic_star_on")
+      }
+  
 
     /*
     // MARK: - Navigation
