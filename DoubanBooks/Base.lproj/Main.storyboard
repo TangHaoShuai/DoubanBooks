@@ -12,7 +12,7 @@
         <!--图书类别-->
         <scene sceneID="anA-iP-80f">
             <objects>
-                <collectionViewController id="4Zl-sQ-89q" customClass="CategorisesController" customModule="DoubanBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="4Zl-sQ-89q" customClass="CategorisesController" customModule="弟弟App" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="t46-vg-wWj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="2OD-EY-QFK" customClass="CategoryCell" customModule="DoubanBooks" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="2OD-EY-QFK" customClass="CategoryCell" customModule="弟弟App" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="100" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -105,7 +105,7 @@
         <!--Add Category Controller-->
         <scene sceneID="wTc-cX-bSa">
             <objects>
-                <viewController id="TZ6-qb-dMg" customClass="AddCategoryController" customModule="DoubanBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TZ6-qb-dMg" customClass="AddCategoryController" customModule="弟弟App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSy-QD-fea">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9G-Xr-Ouc">
                                 <rect key="frame" x="20" y="556" width="374" height="42"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="保存">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,13 +161,13 @@
         <!--Books Controller-->
         <scene sceneID="afn-BY-7XL">
             <objects>
-                <tableViewController id="de9-Jj-zoA" customClass="BooksController" customModule="DoubanBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="de9-Jj-zoA" customClass="BooksController" customModule="弟弟App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YuG-tp-lJc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="140" id="aRa-Uw-If0" customClass="BookCell" customModule="DoubanBooks" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="140" id="aRa-Uw-If0" customClass="BookCell" customModule="弟弟App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aRa-Uw-If0" id="Q2f-On-ATq">
@@ -208,7 +208,7 @@
                                                 <constraint firstAttribute="width" constant="126.67" id="KG6-if-RNv"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android与王二狗的故事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfX-wf-5GM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfX-wf-5GM">
                                             <rect key="frame" x="150.5" y="11" width="181.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="JTK-pP-l7I"/>
@@ -299,7 +299,7 @@
         <!--豆瓣图书-->
         <scene sceneID="iwe-Kl-078">
             <objects>
-                <collectionViewController id="a1G-6n-eVh" customClass="FindController" customModule="DoubanBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="a1G-6n-eVh" customClass="FindController" customModule="弟弟App" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lI7-sR-fFa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,7 +312,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" reuseIdentifier="bookitemcells" id="cEm-55-vmq" customClass="FindCell" customModule="DoubanBooks" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" reuseIdentifier="bookitemcells" id="cEm-55-vmq" customClass="FindCell" customModule="弟弟App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="100" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ctj-o7-Vsl">
@@ -334,7 +334,7 @@
                                             <rect key="frame" x="75" y="121" width="17" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="黄二狗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuk-p5-NxV">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuk-p5-NxV">
                                             <rect key="frame" x="29" y="124" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -372,7 +372,7 @@
                                 </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="searchHeader" id="Nlg-1M-KQn" customClass="SearchHeader" customModule="DoubanBooks" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="searchHeader" id="Nlg-1M-KQn" customClass="SearchHeader" customModule="弟弟App" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -429,7 +429,7 @@
                             <outlet property="delegate" destination="iIk-bQ-T9l" id="BGM-bh-wdq"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="读书统计" selectedImage="bookmark.fill" catalog="system" id="CK5-kp-HrH"/>
+                    <tabBarItem key="tabBarItem" title="读书统计" image="tornado" catalog="system" id="CK5-kp-HrH"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKy-oA-fjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,7 +438,7 @@
         <!--Book Detail Controller-->
         <scene sceneID="fpR-kG-uYN">
             <objects>
-                <viewController id="wg5-kD-tiE" customClass="BookDetailController" customModule="DoubanBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wg5-kD-tiE" customClass="BookDetailController" customModule="弟弟App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oAw-tt-S2o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,8 +450,8 @@
                                     <constraint firstAttribute="height" constant="295" id="nYI-S1-8k4"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者:黄二狗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6g-LJ-z4Y">
-                                <rect key="frame" x="214" y="101" width="91.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者:Luck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6g-LJ-z4Y">
+                                <rect key="frame" x="214" y="101" width="76.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="QJb-EJ-z97"/>
                                 </constraints>
@@ -497,7 +497,7 @@
                                     <constraint firstAttribute="height" constant="44" id="nN1-gi-dvT"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="JAVA进阶" id="14V-3r-uS1">
+                                    <navigationItem title="Android" id="14V-3r-uS1">
                                         <barButtonItem key="leftBarButtonItem" title="收藏" image="ic_star_off" id="hqP-Vu-W6v">
                                             <connections>
                                                 <action selector="collect:" destination="wg5-kD-tiE" id="qp6-M9-UEg"/>
@@ -607,7 +607,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark.fill" catalog="system" width="54" height="64"/>
         <image name="click" width="760" height="760"/>
         <image name="down" width="48" height="48"/>
         <image name="ic_star_off" width="32" height="32"/>
@@ -615,8 +614,9 @@
         <image name="person.crop.square" catalog="system" width="64" height="56"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="star" catalog="system" width="64" height="58"/>
+        <image name="tornado" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Eez-ko-ZYt"/>
+        <segue reference="IXj-zo-euM"/>
     </inferredMetricsTieBreakers>
 </document>

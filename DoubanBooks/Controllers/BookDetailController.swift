@@ -11,7 +11,9 @@ import Alamofire
 import AlamofireImage
 
 
-class BookDetailController: UIViewController,PickerItemSelectedDelegate{
+class BookDetailController: UIViewController,PickerItemSelectedDelegate,UITableViewDataSource,UITableViewDelegate{
+ 
+    
    
     
   
@@ -82,8 +84,11 @@ class BookDetailController: UIViewController,PickerItemSelectedDelegate{
       ///点击收藏
     @IBAction func collect(_ sender: Any) {
         if  UIImage(named: "ic_star_off") == imgcollect.image{
-          let picker = ActionCollectionPicker<VMCategoty>(title: "选择图书类别", items: categories, handler: self, mother: self.view)
-                        picker.show()
+//          let picker = ActionCollectionPicker<VMCategoty>(title: "选择图书类别", items: categories, handler: self, mother: self.view)
+//                        picker.show()
+            
+            let Picker = ActionTabePicker(title: "选择图书类别", count: categories.count, dataSoure: self, delegate: self).show(superView: self.view)
+            
         }else{
             imgcollect.image =  UIImage(named: "ic_star_off")
             let (success, error) =  try! factory.removeBook(book: book!)
@@ -100,8 +105,29 @@ class BookDetailController: UIViewController,PickerItemSelectedDelegate{
          UIAlertController.showAlert("点击了收藏！！", in: self)
          imgcollect.image =  UIImage(named: "ic_star_on")
       }
-  
-
+    
+     private var tablePicker: ActionTabePicker?
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+     }
+     
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+                let category = categories[indexPath.row]
+                cell.textLabel?.text = category.name
+                return cell
+     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 60
+    }
+    
+       func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           itemSelected(index: indexPath.row)
+           if tablePicker != nil {
+               tablePicker?.cancel()
+           }
+       }
     /*
     // MARK: - Navigation
 
