@@ -19,7 +19,6 @@
 		BA6714E12351507A0067D4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6714DF2351507A0067D4F1 /* Main.storyboard */; };
 		BA6714E42351507A0067D4F1 /* DoubanBooks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA6714E22351507A0067D4F1 /* DoubanBooks.xcdatamodeld */; };
 		BA6714E62351507B0067D4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6714E52351507B0067D4F1 /* Assets.xcassets */; };
-		BA6714E92351507B0067D4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6714E72351507B0067D4F1 /* LaunchScreen.storyboard */; };
 		BA6714F42351507B0067D4F1 /* DoubanBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6714F32351507B0067D4F1 /* DoubanBooksTests.swift */; };
 		BA67150E23516B010067D4F1 /* VMCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA67150D23516B010067D4F1 /* VMCategory.swift */; };
 		BA67151023516BF40067D4F1 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA67150F23516BF40067D4F1 /* CategoryRepository.swift */; };
@@ -46,6 +45,7 @@
 		BD8F328623629B3C00593B7F /* FindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F328523629B3C00593B7F /* FindController.swift */; };
 		BD9154FF236FAE4A004D87BA /* BookDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9154FE236FAE4A004D87BA /* BookDetailController.swift */; };
 		BDC50F7123668A4C00D0DEB0 /* ApiParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50F7023668A4C00D0DEB0 /* ApiParameters.swift */; };
+		BDF9678B23790A8100C4C4FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6714E72351507B0067D4F1 /* LaunchScreen.storyboard */; };
 		C18879C1928D284A9F1F0CB7 /* Pods_DoubanBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5200CE44F9ED57E66273DB /* Pods_DoubanBooksTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -365,7 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA6714E92351507B0067D4F1 /* LaunchScreen.storyboard in Resources */,
+				BDF9678B23790A8100C4C4FC /* LaunchScreen.storyboard in Resources */,
 				BA655E49235ABC5100767920 /* CategoryTimeList.plist in Resources */,
 				BA6714E62351507B0067D4F1 /* Assets.xcassets in Resources */,
 				BA6714E12351507A0067D4F1 /* Main.storyboard in Resources */,

@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 private let reuseIdentifier = "bookitemcells"
-                    
+
 class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarDelegate  {
     
      var category: VMCategoty?
@@ -93,6 +93,8 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
       }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        reductionBook()
+          category = nil
         if let kw = searchBar.text {
             tabBarController!.viewControllers![1].tabBarItem.badgeValue = kw
         }
@@ -103,6 +105,7 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
         isLoading = false
         currentPage = 0
         books?.removeAll()
+      
     }
     
     func loadBooks(kw:String) {
