@@ -93,7 +93,10 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
       }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        reductionBook()
+        
+        UserCookies.updateFrequency(of: searchBar.text! )
+        
+          reductionBook()
           category = nil
         if let kw = searchBar.text {
             tabBarController!.viewControllers![1].tabBarItem.badgeValue = kw
@@ -105,7 +108,6 @@ class FindController: UICollectionViewController,EmptyViewDelegate ,UISearchBarD
         isLoading = false
         currentPage = 0
         books?.removeAll()
-      
     }
     
     func loadBooks(kw:String) {

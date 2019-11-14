@@ -147,10 +147,8 @@ class CategorisesController: UICollectionViewController ,EmptyViewDelegate{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
         let category = categories![indexPath.item]
         cell.lblName.text = category.name!
-        
-        
+
         cell.lblCount.text = String(factory.getBooksCountOfCategory(category: category.id)!)
-        
         
         // TODO: 图库文件保存到沙盒，取文件地址
         cell.imgCover.image = UIImage(contentsOfFile: NSHomeDirectory().appending(imgDir).appending(category.image!))

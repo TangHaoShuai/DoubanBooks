@@ -1,21 +1,31 @@
 PODS:
+  - AAInfographics (4.0.0)
   - Alamofire (4.9.1)
   - AlamofireImage (3.6.0):
     - Alamofire (~> 4.9)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
 
 DEPENDENCIES:
+  - AAInfographics
   - Alamofire (~> 4.7)
   - AlamofireImage (~> 3.5)
+  - Charts
 
 SPEC REPOS:
   trunk:
+    - AAInfographics
     - Alamofire
     - AlamofireImage
+    - Charts
 
 SPEC CHECKSUMS:
+  AAInfographics: bbeed03caece4ee3b5e557d734967394e9bcdb11
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
 
-PODFILE CHECKSUM: 8746ef1a8bb88bbc5c5596b564658d14421b62f7
+PODFILE CHECKSUM: ca725dbd2f17238c2541f848b1c92e1813ef0802
 
 COCOAPODS: 1.8.4

@@ -13,9 +13,7 @@ import AlamofireImage
 
 
 class BooksController: UITableViewController,EmptyViewDelegate {
-    
-    
-    
+
     var isEmpty: Bool{
         get {
             if let data = books {
@@ -51,6 +49,10 @@ class BooksController: UITableViewController,EmptyViewDelegate {
       //  books =   try? factory.getBooksBy(kw: "java")
          do{
             books = try! factory.getBooksOf(category: category!.id)
+            
+            let   count = UserCookies.getRecords(of: category!.id)
+            UserCookies.updateRecords(of: category!.id, count: count + 1)
+           
                }catch DataError.readCollectionError(let info){
                    books = [VMBook]()
                    UIAlertController.showALertAndDismiss(info, in: self)
